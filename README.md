@@ -7,7 +7,7 @@ The test setup was powered with a lab power supply at 5.0 V and optionally 3.7 V
 ## Test Cycle
 
 The program performs the following test cycle in `startup()`. It will be repeated infinitely:
-* 4 seconds awake in `delayMicroseconds()` (WLAN/BT off)
+* 4 seconds awake in `delayMicroseconds()` (WiFi/Bluetooth off)
 * 4 seconds in light sleep
 * 4 seconds in deep sleep
 
