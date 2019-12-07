@@ -27,17 +27,21 @@ The oscilloscope shows 10 mA per division on Y, zero is at the bottom grid line.
 ### NodeMCU ESP-32S V1.1
 
 5 V
-<img src="doc/NodeMCU_ESP-32S_V1.1_osc_5V.png" width=600>
+
+<img src="doc/NodeMCU_ESP-32S_V1.1_osc_5V.png" width=400>
 
 ### WEMOS LOLIN32 V1.0.0
 
 5 V
-<img src="doc/WEMOS_LOLIN32_V1.0.0_osc_5V.png" width=600>
+
+<img src="doc/WEMOS_LOLIN32_V1.0.0_osc_5V.png" width=400>
 
 3.7 V
-<img src="doc/WEMOS_LOLIN32_V1.0.0_osc_3.3V.png" width=600>
+
+<img src="doc/WEMOS_LOLIN32_V1.0.0_osc_3.3V.png" width=400>
 
 ### LILYGO ESP32 OLED
 
 5 V
-<img src="doc/LILYGO_ESP32_OLED_osc_5V.png" width=600>
+
+<img src="doc/LILYGO_ESP32_OLED_osc_5V.png" width=400>
