@@ -2,7 +2,7 @@
 
 ## Test Setup
 
-The test setup was powered with a lab power supply at 5.0 V and optionally 3.7 V, if the boards supports rechargable li-ion batteries. The current was measured both with a UNI-T UT61E multimeter in the mA range and with an oscillosope at an 1.00 &#937; series resistor. The voltage loss at the multimeter and the resistor is below 100 mV.
+The test setup was powered with a lab power supply at 5.0 V and optionally 3.7 V, if the boards supports rechargeable li-ion batteries. The current was measured both with a UNI-T UT61E multimeter in the mA range and with an oscillosope at an 1.00 &#937; series resistor. The voltage loss at the multimeter and the resistor is below 100 mV.
 
 ## Test Cycle
 
