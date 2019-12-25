@@ -2,9 +2,9 @@
 
 | Board                | Voltage [V] | Awake [mA] | Light Sleep [mA] | Deep Sleep [mA] |
 | -------------------- | :---------: | :--------: | :--------------: | :-------------: |
-| EzSCB ESP32-01       |         3.7 |       52.6 |              1.6 |         < 0.012 |
-| EzSCB ESP32-01       |         5.0 |       53.1 |              1.6 |           0.012 |
-| EzSCB ESP32-01       |        12.0 |       53.4 |              1.8 |           0.016 |
+| EzSBC ESP32-01       |         3.7 |       52.6 |              1.6 |         < 0.012 |
+| EzSBC ESP32-01       |         5.0 |       53.1 |              1.6 |           0.012 |
+| EzSBC ESP32-01       |        12.0 |       53.4 |              1.8 |           0.016 |
 | LILYGO ESP32 OLED    |         5.0 |       64.5 |             10.8 |             9.4 |
 | NodeMCU ESP-32S V1.1 |         5.0 |       64.6 |             13.8 |             4.7 |
 | WEMOS LOLIN32 V1.0.0 |         3.7 |       55.7 |              2.0 |            0.13 |
@@ -25,9 +25,9 @@ The program performs the following test cycle in `startup()`. It will be repeate
 
 The oscilloscope shows 10 mA per division on Y, zero is at the bottom grid line. This cheap thing has a minor offset error of about +1.5 mA in the used 10 mV range on this channel which cannot be calibrated any better.
 
-### EzSCB ESP32-01
+### EzSBC ESP32-01
 
-This board is optimized for low power consumption while maintaining the ease-of-use of a development/breakout board with USB connector and even two RGB LEDs and push buttons on it. The deep sleep current can even be more improved as described on [EzSBC ESP32-01 Product Description](https://www.ezsbc.com/index.php/featured-products-list-home-page/wifi01-35.html#.XgMr_iHQhEY). High quality from the US.
+This board is optimized for low power consumption while maintaining the ease-of-use of a development/breakout board with USB connector and even two RGB LEDs and push buttons on it. The deep sleep current can even be more improved as described on [EzSBC ESP32-01 Product Description](https://www.ezsbc.com/index.php/featured-products-list-home-page/wifi01-35.html#.XgMr_iHQhEY). Great quality from the US.
 
 <img src="doc/EzSBC_ESP32-01_board.jpg" width=400>
 
