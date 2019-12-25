@@ -27,7 +27,8 @@ The oscilloscope shows 10 mA per division on Y, zero is at the bottom grid line.
 
 ### EzSBC ESP32-01
 
-This board is optimized for low power consumption while maintaining the ease-of-use of a development/breakout board with USB connector and even two RGB LEDs and push buttons on it. The deep sleep current can even be more improved as described on [EzSBC ESP32-01 Product Description](https://www.ezsbc.com/index.php/featured-products-list-home-page/wifi01-35.html#.XgMr_iHQhEY). Great quality from the US.
+This board is optimized for low power consumption while maintaining the ease-of-use of a development/breakout board with USB connector. The deep sleep current can even be more reduced as described on [EzSBC ESP32-01 Product Description](https://www.ezsbc.com/index.php/featured-products-list-home-page/wifi01-35.html#.XgMr_iHQhEY). 
+It has reset and flash push buttons, but also supports auto-download. It also has a freely usable RGB LED. The other LED shows Tx/Rx. It's narrow and therefore breadboard friendly. Great quality from the USA.
 
 <img src="doc/EzSBC_ESP32-01_board.jpg" width=400>
 
