@@ -76,5 +76,3 @@ A solid older board with good low power characteristics and recharchable Li-ion 
 5 V
 
 <img src="doc/WEMOS_LOLIN32_V1.0.0_osc_5V.png" width=300>
-
-<meta name="google-site-verification" content="zchfavQzW_WYHCWxRwSlJxZlSK4ekHaJ_TdZg-IAJ6A" />
