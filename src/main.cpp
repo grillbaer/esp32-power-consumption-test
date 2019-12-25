@@ -1,5 +1,8 @@
 #include <Arduino.h>
 #include "driver/rtc_io.h"
+#include <esp_wifi.h>
+#include <esp_bt.h>
+#include <esp_bt_main.h>
 
 #define SERIAL_BAUD 115200
 
@@ -12,6 +15,10 @@
 void setup()
 {
   Serial.begin(SERIAL_BAUD);
+
+  esp_wifi_stop();
+  esp_bt_controller_disable();
+  esp_bluedroid_disable();
 
   Serial.printf("Wake for %d seconds\n", WAKE_SECS);
   delayMicroseconds(WAKE_SECS * MICROS);
