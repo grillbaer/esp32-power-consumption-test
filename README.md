@@ -17,7 +17,7 @@ The following table shows the power supply current that various ESP32 boards req
 The test setup was powered with a lab power supply at 5.0 V, optionally at 3.7 V for rechargeable Li-ion batteries, or 12 V if the board supports it. The current was measured both with a UNI-T UT61E multimeter in the mA range in series and with an oscillosope at an 1.00 &#937; series resistor. The voltage loss at the multimeter and the resistor is below 100 mV.
 The oscilloscope view helps to see current spikes and noise, mainly from the voltage regulators.
 
-No external peripherals were connected to the boards during the test. Note that these may severely influence the power consumption in real applications during deep sleep. GPIOs are not automatically of high impedence while sleeping, pull-up or -down and output may still be active and the behavior is not equal for all GPIOs. For the subset of RTC GPIOs, you may control their behavior using `rtc_gpio_isolate(gpio)`, `rtc_gpio_hold_en(gpio)` and `rtc_gpio_hold_dis(gpio)` and some other `rtc_gpio_...()` functions in [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/gpio.html). For battery life optimization, you always will need to measure your own circuit. It may be far off the minimum values from the table.
+No external peripherals were connected to the boards during the test. Note that these may severely influence the power consumption in real applications during deep sleep. GPIOs are not automatically of high impedence while sleeping. Pull-up or -down and output may still be active and the behavior is not equal for all GPIOs. For the subset of RTC GPIOs, you may control their behavior using `rtc_gpio_isolate(gpio)`, `rtc_gpio_hold_en(gpio)` and `rtc_gpio_hold_dis(gpio)` and some other `rtc_gpio_...()` functions in [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/gpio.html). For battery life optimization, you always will need to measure your own circuit. It may be far off the minimum values from the table and have some surprises ready for you.
 
 ## Test Cycle
 
@@ -33,9 +33,10 @@ The oscilloscope shows 10 mA per division on Y, zero is at the bottom grid line.
 ### EzSBC ESP32-01
 
 This board is optimized for low power consumption while maintaining the ease-of-use of a development/breakout board with USB connector. The deep sleep current can even be more reduced as described on [EzSBC ESP32-01 Product Description](https://www.ezsbc.com/index.php/featured-products-list-home-page/wifi01-35.html#.XgMr_iHQhEY). 
-It has reset and flash push buttons, but also supports auto-download. It also has a freely usable RGB LED. The other LED shows Tx/Rx (red/green), blue is connected to another GPIO. It is narrow and therefore breadboard friendly. Good quality from the USA.
+It has reset and flash push buttons, but also supports auto-download. It also has a freely usable RGB LED. The other LED shows Tx/Rx (red/green), blue is connected to another GPIO. It is narrow and therefore breadboard friendly. However, the very tiny printing is hard to read and contains special IO functions for some GPIOs instead of their numbers.
+Good quality from the USA.
 
-**Note** that these LEDs are *always* connected to +3.3 V with series resistors, a fact that may ruin your deep sleep current when their GPIOs are used to connect peripherals in your battery operated application!
+**Note** that the LEDs are *always* connected to +3.3 V with series resistors, a fact that may ruin your deep sleep current when their GPIOs are used to connect peripherals in your battery operated application! You may have to resort to other GPIOs or unsolder the LEDs, then.
 
 <img src="doc/EzSBC_ESP32-01_board.jpg" width=510>
 
