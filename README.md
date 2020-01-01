@@ -21,16 +21,20 @@ No external peripherals were connected to the boards during the test. Note that 
 
 ## Test Cycle
 
-The program performs the following test cycle in `startup()`. It will be repeated infinitely:
+The test performs the following test cycle in `startup()`. It will be repeated infinitely:
 * 4 seconds awake in `delayMicroseconds()` (WiFi/Bluetooth off)
 * 4 seconds in light sleep
 * 4 seconds in deep sleep
 
-## Board Details
+## Test Software
+
+To use the really minimalistic test program in your own tests, simply clone this repository and use the great [PlatformIO](https://platformio.org) for compilation and upload to the board.
+
+# Board Details
 
 The oscilloscope shows 10 mA per division on Y, zero is at the bottom grid line. This cheap thing has a minor offset error of about +1.5 mA in the used 10 mV range on this channel which cannot be calibrated any better.
 
-### EzSBC ESP32-01
+## EzSBC ESP32-01
 
 This board is optimized for low power consumption while maintaining the ease-of-use of a development/breakout board with USB connector. The deep sleep current can even be more reduced as described on [EzSBC ESP32-01 Product Description](https://www.ezsbc.com/index.php/featured-products-list-home-page/wifi01-35.html#.XgMr_iHQhEY). 
 It has reset and flash push buttons, but also supports auto-download. It also has a freely usable RGB LED. The other LED shows Tx/Rx (red/green), blue is connected to another GPIO. It is narrow and therefore breadboard friendly. However, the very tiny printing is hard to read and contains special IO functions for some GPIOs instead of their numbers.
@@ -52,9 +56,10 @@ Good quality from the USA.
 
 <img src="doc/EzSBC_ESP32-01_osc_12V.png" width=400>
 
-### LILYGO ESP32 OLED
+## LILYGO ESP32 OLED
 
-A very useful board for development when a 128x64 pixel OLED display with SSD1306 controller is required.
+A very useful board for development when a 128x64 pixel OLED display with SSD1306 controller is required. 
+On the flip side, it's not really optimized for battery operation.
 
 <img src="doc/LILYGO_ESP32_OLED_board.jpg" width=550>
 
@@ -62,7 +67,7 @@ A very useful board for development when a 128x64 pixel OLED display with SSD130
 
 <img src="doc/LILYGO_ESP32_OLED_osc_5V.png" width=400>
 
-### NodeMCU ESP-32S V1.1
+## NodeMCU ESP-32S V1.1
 
 An older small board.
 
@@ -72,9 +77,9 @@ An older small board.
 
 <img src="doc/NodeMCU_ESP-32S_V1.1_osc_5V.png" width=400>
 
-### WEMOS LOLIN32 V1.0.0
+## WEMOS LOLIN32 V1.0.0
 
-A solid older board with good low power characteristics and recharchable Li-ion battery support.
+A solid older board with quite good low power characteristics and recharchable Li-ion battery support.
 
 <img src="doc/WEMOS_LOLIN32_V1.0.0_board.jpg" width=500>
 
