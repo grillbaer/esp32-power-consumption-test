@@ -15,9 +15,12 @@ The following table shows the power supply current that various ESP32 boards req
 ## Test Setup
 
 The test setup was powered with a lab power supply at 5.0 V, optionally at 3.7 V for rechargeable Li-ion batteries, or 12 V if the board supports it. The current was measured both with a UNI-T UT61E multimeter in the mA range in series and with an oscillosope at an 1.00 &#937; series resistor. The voltage loss at the multimeter and the resistor is below 100 mV.
-The oscilloscope view helps to see current spikes and noise, mainly from the voltage regulators.
 
-No external peripherals were connected to the boards during the test. Note that these may severely influence the power consumption in real applications during deep sleep. GPIOs are not automatically of high impedence while sleeping. Pull-up or -down and output may still be active and the behavior is not equal for all GPIOs. For the subset of RTC GPIOs, you may control their behavior using `rtc_gpio_isolate(gpio)`, `rtc_gpio_hold_en(gpio)` and `rtc_gpio_hold_dis(gpio)` and some other `rtc_gpio_...()` functions in [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/gpio.html). For battery life optimization, you always will need to measure your own circuit. It may be far off the minimum values from the table and have some surprises ready for you.
+The oscilloscope view helps to see current spikes and noise, mainly from the voltage regulators. The screenshots below show 10 mA per division on Y, zero is at the bottom grid line. (This cheap device has a minor offset error of about +1.5 mA in the used 10 mV range on this channel which cannot be calibrated any better.)
+
+No external peripherals were connected to the boards during the test. Note that these may severely influence the power consumption in real applications during deep sleep. GPIOs are not automatically of high impedence while sleeping. Pull-up or -down and output may still be active and the behavior is not equal for all GPIOs. For the subset of RTC GPIOs, you may control their behavior using `rtc_gpio_isolate(gpio)`, `rtc_gpio_hold_en(gpio)` and `rtc_gpio_hold_dis(gpio)` and some other `rtc_gpio_...()` functions in [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/gpio.html). 
+
+For battery life optimization, you always will need to measure your own circuit. It may be far off the minimum values from the table and have some surprises ready for you.
 
 ## Test Cycle
 
@@ -31,8 +34,6 @@ The test performs the following test cycle in `startup()`. It will be repeated i
 To use the really minimalistic test program in your own tests, simply clone this repository and use the great [PlatformIO](https://platformio.org) for compilation and upload to the board.
 
 # Board Details
-
-The oscilloscope shows 10 mA per division on Y, zero is at the bottom grid line. This cheap thing has a minor offset error of about +1.5 mA in the used 10 mV range on this channel which cannot be calibrated any better.
 
 ## EzSBC ESP32-01
 
